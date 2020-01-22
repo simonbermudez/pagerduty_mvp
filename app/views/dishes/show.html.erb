@@ -7,7 +7,7 @@
 
 <p>
   <strong>Img:</strong>
-  <%= @dish.img %>
+  <img width="256px" src="<%= @dish.img %>" alt="<%= @dish.name %> Picture">
 </p>
 
 <%= link_to 'Edit', edit_dish_path(@dish) %> |
