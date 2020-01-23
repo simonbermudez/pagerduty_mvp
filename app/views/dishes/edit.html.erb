@@ -1,6 +1,7 @@
-<h1>Editing Dish</h1>
+<div class="container">
+    <h1>Editing Dish</h1>
+    <%= render 'form', dish: @dish %>
+    <%= link_to 'Show', @dish %> |
+    <%= link_to 'Back', dishes_path %>
+</div>
 
-<%= render 'form', dish: @dish %>
-
-<%= link_to 'Show', @dish %> |
-<%= link_to 'Back', dishes_path %>

@@ -11,14 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :img %>
-    <%= form.text_field :img %>
+    <%= form.text_field :img, class: "form-control" %>
+    <small class="form-text text-muted"> Enter the URL of the image you wish to display </small>
   </div>
 
   <div class="actions">

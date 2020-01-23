@@ -2,20 +2,21 @@
 <div class="container">
   <h1>Dishes</h1> 
   <%= link_to 'New Dish', new_dish_path %>
-  <div class="card-group">
+  <div class="row row-cols-1 row-cols-md-2">
     <% @dishes.each do |dish| %>
     <div class="col mb-4">
+      <a href="dishes/<%= dish.id %>">
       <div class="card">
           <img class="card-img-top" src="<%= dish.img %>" alt="<%= dish.name %> Picture">
           <div class="card-body">
             <h5 class="card-title"><%= dish.name %></h5>
             <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            <%= link_to 'Show', dish%>
             <%= link_to 'Edit', edit_dish_path(dish)%>
             <%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' }%>
           </div>
       </div>
+    </a>
     </div>
   <% end %>
   </div>
@@ -23,3 +24,4 @@
 
 
 <br>
+ 
